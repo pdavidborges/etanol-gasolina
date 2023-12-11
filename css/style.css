@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+#header{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    /*
+        FLEXBOX
+        São propriedades CSS para criação de layouts
+    */
+    display: flex;
+    justify-content: center; /*trabalha o alinhamento no eixo X*/
+    align-items: center; /*trabalha o alinhamento no eixo Y*/
+}
+
+#text-header{    
+    width: 95%;
+    max-width: 1000px; /*largura máxima*/
+    height: auto;
+    text-align: center;
+    color: white;    
+}
+
+#text-header h1{
+    font-size: 48px;
+}
+
+#text-header h2{
+    font-size: 32px;
+}
+
+#content{    
+    width: 95%;
+    max-width: 700px;
+    height: auto;
+    margin: 80px auto; /*vertical(top/bottom) horizontal(left/right)*/
+    color: #555555;    
+}
+
+#content h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#flex-content{    
+    margin-top: 24px;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flex-content input{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: solid 1px #CCCCCC;
+}
+
+#flex-content button{
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 7px 35px;
+    border-radius: 3px;
+}
+
+#result{
+    background-color: #0066CC;
+    color: #ffffff;
+    font-size: 24px;
+    width: 350px;    
+    padding-top: 22px;
+    padding-bottom: 22px;
+    text-align: center;
+    display: none; /*faz com que a div comece escondida*/
+}
+
+#footer{
+    width: 100%;
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;    
+}
+
+
+/*Media Queries*/
+
+/*
+cotiinformatica.com.br/web/aula6.zip
+*/
+
+@media (max-width: 710px){
+
+    #text-header h1{
+        font-size: 32px;
+    }
+
+    #text-header h2{
+        font-size: 20px;
+    }
+
+    #flex-content{
+        flex-direction: column;
+    }
+
+    #flex-content form{
+        width: 100%;
+    }
+
+    #flex-content input, #flex-content button{
+        width: 100%;
+    }
+
+    #result{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 450px){
+
+    #header{
+        background-image: url(../img/background-mob.jpg);
+    }
+
+}
